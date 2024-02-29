@@ -18,3 +18,16 @@ while (soma < 10) {
 }
 
 console.log(listaDeNumeros);
+
+// O método join() une todos os elementos de um array em uma string.
+
+let numeroInicial = 0;
+let numeroMaximo = 10;
+
+for (let i = 0; i <= 10; i++) {
+  if (i < 10) {
+    console.log(i + " - ");
+  } else {
+    console.log(i);
+  }
+}

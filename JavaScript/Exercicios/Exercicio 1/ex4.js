@@ -3,15 +3,14 @@
 
 let nome = "Victor Alexandre Guimaraes Muller";
 
-let nomeLowerCase = nome.toLowerCase();
-
+/*
 console.log(nomeLowerCase);
 
 console.log(nome.split(" ")[0]);
 console.log(nome.split(" ").length);
 
 console.log(nome.split(" ")[nome.split(" ").length - 1]);
-
+*/
 console.log(
   nome.split(" ")[0].toLowerCase() +
     "." +

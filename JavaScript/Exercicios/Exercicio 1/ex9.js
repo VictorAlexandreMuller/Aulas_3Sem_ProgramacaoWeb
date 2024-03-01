@@ -2,19 +2,27 @@
 // como argumento e retorna true se o e-mail for válido ou false caso contrário.
 // Um e-mail válido deve conter um único símbolo '@' e pelo menos um ponto '.' após o '@'.
 
-let emailRecebido = "vi.caco@gmail.com";
+function checagemEmail(emailRecebido) {
+  let primeiraValidacao = emailRecebido.match(/@/g);
 
-if (emailRecebido.indexOf("@") >= 0) {
-  emailRecebido.char("@");
-  emailRecebido.indexOf(".");
-  console.log(emailRecebido.indexOf("@"));
-  console.log(emailRecebido.indexOf("."));
+  if (primeiraValidacao == null) {
+    return false;
+  }
 
-  console.log(emailRecebido.split("").reverse().join(""));
+  if (primeiraValidacao.length != 1) {
+    return false;
+  }
 
-  console.log("True");
-} else {
-  console.log("False");
+  let separacao = emailRecebido.split("@");
+  let segundaValidacao = separacao[1].match(/\./g);
+
+  if (segundaValidacao == null) {
+    return false;
+  }
+  if (segundaValidacao.length <= 0) {
+    return false;
+  }
+  return true;
 }
 
-console.log(emailRecebido.indexOf("@"));
+console.log(checagemEmail("vi.caco@gmail.com"));

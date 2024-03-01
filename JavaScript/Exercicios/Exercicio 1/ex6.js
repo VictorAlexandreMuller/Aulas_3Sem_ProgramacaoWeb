@@ -2,16 +2,18 @@
 // Caso o número seja menor ou igual a zero deve mostrar
 // a mensagem “Só é aceito números positivos maiores que zero”.
 
-let numero = 8;
-
-if (numero > 0) {
-  console.log(numero * 2);
-} else {
-  console.log("Só é aceito números positivos maiores que zero.");
+function dobroDoNumero(numero) {
+  if (numero > 0) {
+    console.log(numero * 2);
+  } else {
+    console.log("Só é aceito números positivos maiores que zero.");
+  }
 }
+dobroDoNumero(8);
 
 // ---------------------------------------------------------------------------
 
+/*
 let dobro = function (num) {
   return num * 2;
 };
@@ -27,3 +29,4 @@ for (let i = 0; i < 10; i++) {
     console.log("Só é aceito números positivos maiores que zero.");
   }
 }
+*/

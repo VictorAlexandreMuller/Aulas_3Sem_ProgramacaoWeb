@@ -3,6 +3,19 @@
 // Observação: após o número 10 não pode ter um traço.
 
 let valorInicial = 1;
+let result = "";
+while (valorInicial <= 10) {
+  if (valorInicial < 10) {
+    result = result + valorInicial + " - ";
+  } else {
+    result = result + valorInicial;
+  }
+  valorInicial += 1;
+}
+console.log(result);
+
+/*
+let valorInicial = 1;
 const valorAdicionado = 1;
 const listaDeNumeros = [];
 
@@ -11,6 +24,10 @@ soma = 0;
 console.log("Valor Inicial: " + valorInicial);
 
 while (soma < 10) {
+  if (i < 10) {
+    i + " - ";
+  }
+
   soma = valorInicial + valorAdicionado;
   listaDeNumeros.push(valorInicial);
   valorInicial = soma;
@@ -31,3 +48,4 @@ for (let i = 0; i <= 10; i++) {
     console.log(i);
   }
 }
+*/

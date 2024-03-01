@@ -1,7 +1,7 @@
 // 7.	Escreva uma função que receba uma string como argumento e retorne a string invertida.
 
-let stringRecebida = "tamandua bandeira";
+function stringInvertida(stringRecebida) {
+  return stringRecebida.split("").reverse().join("");
+}
 
-// let inverterString = stringRecebida.split('').reverse().join('')
-
-console.log(stringRecebida.split("").reverse().join(""));
+console.log(stringInvertida("tamandua bandeira"));

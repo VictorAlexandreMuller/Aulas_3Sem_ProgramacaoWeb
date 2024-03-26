@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .registro {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border: 1px solid black;
+        padding: 15px;
+        width: fit-content;
+        height: fit-content;
+      }
+      .botao {
+        width: 100px;
+        height: 40px;
+      }
+      .campos {
+        width: 400px;
+        height: 15px;
+      }
+      .organizacao {
+        display: flex;
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fixed">
+      <h3><a href="index.html">Voltar</a></h3>
+    </div>
+    <hr size="1" style="margin-bottom: 20px" />
+    <!-- -------------------------------------------------- -->
+    <div>
+      <form
+        class="organizacao"
+        action="https://65fe27c6b2a18489b385cdd7.mockapi.io/matematica"
+        method="post"
+      >
+        <div class="registro">
+          <h3>Informação do Aluno</h3>
+
+          <label for="Nome"> Nome </label>
+          <input class="campos" type="text" name="Nome" />
+
+          <label for="Endereco"> Endereco </label>
+          <input class="campos" type="text" name="Endereco" />
+
+          <label for="Bairro"> Bairro </label>
+          <input class="campos" type="text" name="Bairro" />
+
+          <label for="Cidade"> Cidade </label>
+          <input class="campos" type="text" name="Cidade" />
+
+          <label for="Numero"> Numero </label>
+          <input class="campos" type="text" name="Numero" />
+
+          <label for="Cep"> Cep </label>
+          <input class="campos" type="text" name="Cep" />
+
+          <label for="Complemento"> Complemento </label>
+          <input class="campos" type="text" name="Complemento" />
+
+          <label for="Estado"> Estado </label>
+          <input class="campos" type="text" name="Estado" />
+
+          <label for="Telefone"> Telefone </label>
+          <input class="campos" type="text" name="Telefone" />
+
+          <label for="Celular"> Celular </label>
+          <input class="campos" type="text" name="Celular" />
+
+          <label for="Email"> Email </label>
+          <input class="campos" type="text" name="Email" />
+
+          <label for="Cor"> Cor </label>
+          <input class="campos" type="text" name="Cor" />
+        </div>
+
+        <div class="registro">
+          <h3>Informação do Pai</h3>
+          <label for="nomePai"> Nome </label>
+          <input class="campos" type="text" name="nomePai" />
+
+          <label for="nascimentoPai"> Nascimento </label>
+          <input class="campos" type="text" name="nascimentoPai" />
+
+          <label for="naturalidadePai"> Naturalidade </label>
+          <input class="campos" type="text" name="naturalidadePai" />
+
+          <label for="instrucaoPai"> Instrução </label>
+          <input class="campos" type="text" name="instrucaoPai" />
+
+          <label for="profissaoPai"> Profissão </label>
+          <input class="campos" type="text" name="profissaoPai" />
+
+          <label for="celularPai"> Celular </label>
+          <input class="campos" type="text" name="celularPai" />
+
+          <label for="emailPai"> Email </label>
+          <input class="campos" type="text" name="emailPai" />
+
+          <label for="cpfPai"> Cpf </label>
+          <input class="campos" type="text" name="cpfPai" />
+
+          <label for="responsavelFinanceiroPai"> Responsável Financeiro </label>
+          <div>
+            <input
+              type="radio"
+              id="sim"
+              name="responsavelFinanceiroPai"
+              value="sim"
+            />
+            <label for="sim"> Sim </label><br />
+
+            <input
+              type="radio"
+              id="nao"
+              name="responsavelFinanceiroPai"
+              value="nao"
+            />
+            <label for="nao"> Não </label>
+          </div>
+        </div>
+
+        <div class="registro">
+          <h3>Informação da Mãe</h3>
+          <label for="nomeMae"> Nome </label>
+          <input class="campos" type="text" name="nomeMae" />
+
+          <label for="nascimentoMae"> Nascimento </label>
+          <input class="campos" type="text" name="nascimentoMae" />
+
+          <label for="naturalidadeMae"> Naturalidade </label>
+          <input class="campos" type="text" name="naturalidadeMae" />
+
+          <label for="instrucaoMae"> Instrução </label>
+          <input class="campos" type="text" name="instrucaoMae" />
+
+          <label for="profissaoMae"> Profissão </label>
+          <input class="campos" type="text" name="profissaoMae" />
+
+          <label for="celularMae"> Celular </label>
+          <input class="campos" type="text" name="celularMae" />
+
+          <label for="emailMae"> Email </label>
+          <input class="campos" type="text" name="emailMae" />
+
+          <label for="cpfMae"> Cpf </label>
+          <input class="campos" type="text" name="cpfMae" />
+
+          <label for="responsavelFinanceiroMae"> Responsável Financeiro </label>
+          <div>
+            <input
+              type="radio"
+              id="sim"
+              name="responsavelFinanceiroMae"
+              value="sim"
+            />
+            <label for="sim"> Sim </label><br />
+
+            <input
+              type="radio"
+              id="nao"
+              name="responsavelFinanceiroMae"
+              value="nao"
+            />
+            <label for="nao"> Não </label>
+          </div>
+        </div>
+
+        <div class="registro">
+          <h3>Informação do Curso</h3>
+
+          <label for="nomeCurso"> Nome </label>
+          <div>
+            <input
+              type="radio"
+              id="matematica"
+              name="nomeCurso"
+              value="matematica"
+            />
+            <label for="matematica"> Matemática </label>
+          </div>
+
+          <br />
+
+          <label for="valorCurso"> Valor do Curso </label>
+          <div>
+            <input
+              type="radio"
+              id="valorCurso"
+              name="nomeCurso"
+              value="valorCurso"
+            />
+            <label for="valorCurso"> R$ 200,00 </label>
+          </div>
+
+          <br />
+
+          <label for="dataIngressoCurso"> Data de Ingresso </label>
+          <input class="campos" type="text" name="dataIngressoCurso" />
+
+          <br />
+
+          <label for="formaDePagamentoCurso"> Forma de Pagamento </label>
+          <input class="campos" type="text" name="formaDePagamentoCurso" />
+        </div>
+        <input class="botao" type="submit" />
+      </form>
+    </div>
+  </body>
+</html>

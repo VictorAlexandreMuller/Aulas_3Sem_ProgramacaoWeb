@@ -18,6 +18,10 @@
         width: 300px;
         height: 15px;
       }
+      .campoDate {
+        width: 150px;
+        height: 15px;
+      }
       .organizacao {
         display: flex;
         gap: 10px;
@@ -25,6 +29,11 @@
       .bordaMaior {
         border: 1px solid black;
         padding: 3px 2px;
+        width: fit-content;
+      }
+      .botao {
+        width: 100%;
+        align-items: center;
       }
     </style>
   </head>
@@ -54,7 +63,7 @@
         <div class="registro">
           <h3>Informação do Aluno</h3>
 
-          <label for="Nome"> Nome </label>
+          <label for="Nome"> Nome* </label>
           <input class="campos" type="text" name="Nome" required />
 
           <label for="Endereco"> Endereco </label>
@@ -81,20 +90,20 @@
           <label for="Telefone"> Telefone </label>
           <input class="campos" type="text" name="Telefone" />
 
-          <label for="Celular"> Celular </label>
-          <input class="campos" type="text" name="Celular" />
+          <label for="Celular"> Celular* </label>
+          <input class="campos" type="text" name="Celular" required />
 
-          <label for="Email"> Email </label>
-          <input class="campos" type="text" name="Email" />
+          <label for="Email"> Email* </label>
+          <input class="campos" type="text" name="Email" required />
 
-          <label for="Cor"> Cor </label>
-          <input class="campos" type="text" name="Cor" />
+          <label for="Cor"> Cor* </label>
+          <input class="campos" type="text" name="Cor" required />
         </div>
 
         <div class="registro">
           <h3>Informação do Pai</h3>
-          <label for="nomePai"> Nome </label>
-          <input class="campos" type="text" name="nomePai" />
+          <label for="nomePai"> Nome* </label>
+          <input class="campos" type="text" name="nomePai" required />
 
           <label for="nascimentoPai"> Nascimento </label>
           <input class="campos" type="text" name="nascimentoPai" />
@@ -108,39 +117,34 @@
           <label for="profissaoPai"> Profissão </label>
           <input class="campos" type="text" name="profissaoPai" />
 
-          <label for="celularPai"> Celular </label>
-          <input class="campos" type="text" name="celularPai" />
+          <label for="celularPai"> Celular* </label>
+          <input class="campos" type="text" name="celularPai" required />
 
-          <label for="emailPai"> Email </label>
-          <input class="campos" type="text" name="emailPai" />
+          <label for="emailPai"> Email* </label>
+          <input class="campos" type="text" name="emailPai" required />
 
-          <label for="cpfPai"> Cpf </label>
-          <input class="campos" type="text" name="cpfPai" />
+          <label for="cpfPai"> Cpf* </label>
+          <input class="campos" type="text" name="cpfPai" required />
 
-          <label for="responsavelFinanceiroPai"> Responsável Financeiro </label>
+          <label for="responsavelFinanceiroPai">
+            Responsável Financeiro*
+          </label>
           <div>
-            <input
-              type="radio"
-              id="sim"
+            <select
               name="responsavelFinanceiroPai"
-              value="sim"
-            />
-            <label for="sim"> Sim </label><br />
-
-            <input
-              type="radio"
-              id="nao"
-              name="responsavelFinanceiroPai"
-              value="nao"
-            />
-            <label for="nao"> Não </label>
+              id="responsavelFinanceiroPai"
+              required
+            >
+              <option>Sim</option>
+              <option>Não</option>
+            </select>
           </div>
         </div>
 
         <div class="registro">
           <h3>Informação da Mãe</h3>
-          <label for="nomeMae"> Nome </label>
-          <input class="campos" type="text" name="nomeMae" />
+          <label for="nomeMae"> Nome* </label>
+          <input class="campos" type="text" name="nomeMae" required />
 
           <label for="nascimentoMae"> Nascimento </label>
           <input class="campos" type="text" name="nascimentoMae" />
@@ -154,32 +158,27 @@
           <label for="profissaoMae"> Profissão </label>
           <input class="campos" type="text" name="profissaoMae" />
 
-          <label for="celularMae"> Celular </label>
-          <input class="campos" type="text" name="celularMae" />
+          <label for="celularMae"> Celular* </label>
+          <input class="campos" type="text" name="celularMae" required />
 
-          <label for="emailMae"> Email </label>
-          <input class="campos" type="text" name="emailMae" />
+          <label for="emailMae"> Email* </label>
+          <input class="campos" type="text" name="emailMae" required />
 
-          <label for="cpfMae"> Cpf </label>
-          <input class="campos" type="text" name="cpfMae" />
+          <label for="cpfMae"> Cpf* </label>
+          <input class="campos" type="text" name="cpfMae" required />
 
-          <label for="responsavelFinanceiroMae"> Responsável Financeiro </label>
+          <label for="responsavelFinanceiroMae">
+            Responsável Financeiro*
+          </label>
           <div>
-            <input
-              type="radio"
-              id="sim"
+            <select
               name="responsavelFinanceiroMae"
-              value="sim"
-            />
-            <label for="sim"> Sim </label><br />
-
-            <input
-              type="radio"
-              id="nao"
-              name="responsavelFinanceiroMae"
-              value="nao"
-            />
-            <label for="nao"> Não </label>
+              id="responsavelFinanceiroMae"
+              required
+            >
+              <option>Sim</option>
+              <option>Não</option>
+            </select>
           </div>
         </div>
 
@@ -187,62 +186,59 @@
           <h3>Informação do Curso</h3>
 
           <div>
-            <label for="nomeCurso"> Nome </label>
+            <label for="nomeCurso"> Nome* </label>
             <br />
             <br />
-            <input
-              type="radio"
-              id="matematica"
-              name="nomeCurso"
-              value="matematica"
-            />
-            <label for="matematica"> Matemática </label>
+            <select name="nomeCurso" id="nomeCurso" required>
+              <option>Matemática</option>
+            </select>
           </div>
 
           <br />
 
           <div>
-            <label for="valorCurso"> Valor do Curso </label>
+            <label for="valorCurso"> Valor do Curso* </label>
             <br />
             <br />
-            <input
-              type="radio"
-              id="valorCurso"
-              name="valorCurso"
-              value="valorCurso"
-            />
-            <label for="valorCurso"> R$ 200,00 </label>
+            <select name="valorCurso" id="valorCurso" required>
+              <option>R$ 200,00</option>
+            </select>
           </div>
 
           <br />
 
-          <label for="dataIngressoCurso"> Data de Ingresso </label>
-          <input class="campos" type="date" name="dataIngressoCurso" />
+          <label for="dataIngressoCurso"> Data de Ingresso* </label>
+          <input
+            class="campoDate"
+            type="date"
+            name="dataIngressoCurso"
+            required
+          />
 
           <br />
 
-          <label for="formaDePagamentoCurso"> Forma de Pagamento </label>
+          <label for="formaDePagamentoCurso"> Forma de Pagamento* </label>
           <div>
-            <input
-              type="radio"
-              id="pix"
+            <select
               name="formaDePagamentoCurso"
-              value="pix"
-            />
-            <label for="pix"> Pix </label><br />
-
-            <input
-              type="radio"
-              id="cartao"
-              name="formaDePagamentoCurso"
-              value="cartao"
-            />
-            <label for="cartao"> Cartão </label>
+              id="formaDePagamentoCurso"
+              required
+            >
+              <option>Pix</option>
+              <option>Cartão de Crédito</option>
+            </select>
+          </div>
+          <label for="parcelasPagamento"> Parcelamento* </label>
+          <div>
+            <select name="parcelasPagamento" id="parcelasPagamento" required>
+              <option>1x</option>
+              <option>2x</option>
+            </select>
           </div>
         </div>
+        <input class="botao" type="submit" />
       </form>
       <br />
-      <input class="botao" type="submit" />
     </div>
   </body>
 </html>

@@ -12,29 +12,40 @@
         border: 1px solid black;
         padding: 15px;
         width: fit-content;
-        height: fit-content;
       }
-      .botao {
-        width: 100px;
-        height: 40px;
-      }
+
       .campos {
-        width: 400px;
+        width: 300px;
         height: 15px;
       }
       .organizacao {
         display: flex;
         gap: 10px;
       }
+      .bordaMaior {
+        border: 1px solid black;
+        padding: 3px 2px;
+      }
     </style>
   </head>
   <body>
     <div class="fixed">
-      <h3><a href="index.html">Voltar</a></h3>
+      <h3>
+        <a
+          href="index.html"
+          style="
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+              sans-serif;
+            color: black;
+            text-decoration: none;
+          "
+          >Voltar</a
+        >
+      </h3>
     </div>
     <hr size="1" style="margin-bottom: 20px" />
     <!-- -------------------------------------------------- -->
-    <div>
+    <div class="bordaMaior">
       <form
         class="organizacao"
         action="https://65fe27c6b2a18489b385cdd7.mockapi.io/matematica"
@@ -44,7 +55,7 @@
           <h3>Informação do Aluno</h3>
 
           <label for="Nome"> Nome </label>
-          <input class="campos" type="text" name="Nome" />
+          <input class="campos" type="text" name="Nome" required />
 
           <label for="Endereco"> Endereco </label>
           <input class="campos" type="text" name="Endereco" />
@@ -175,8 +186,10 @@
         <div class="registro">
           <h3>Informação do Curso</h3>
 
-          <label for="nomeCurso"> Nome </label>
           <div>
+            <label for="nomeCurso"> Nome </label>
+            <br />
+            <br />
             <input
               type="radio"
               id="matematica"
@@ -188,12 +201,14 @@
 
           <br />
 
-          <label for="valorCurso"> Valor do Curso </label>
           <div>
+            <label for="valorCurso"> Valor do Curso </label>
+            <br />
+            <br />
             <input
               type="radio"
               id="valorCurso"
-              name="nomeCurso"
+              name="valorCurso"
               value="valorCurso"
             />
             <label for="valorCurso"> R$ 200,00 </label>
@@ -202,15 +217,32 @@
           <br />
 
           <label for="dataIngressoCurso"> Data de Ingresso </label>
-          <input class="campos" type="text" name="dataIngressoCurso" />
+          <input class="campos" type="date" name="dataIngressoCurso" />
 
           <br />
 
           <label for="formaDePagamentoCurso"> Forma de Pagamento </label>
-          <input class="campos" type="text" name="formaDePagamentoCurso" />
+          <div>
+            <input
+              type="radio"
+              id="pix"
+              name="formaDePagamentoCurso"
+              value="pix"
+            />
+            <label for="pix"> Pix </label><br />
+
+            <input
+              type="radio"
+              id="cartao"
+              name="formaDePagamentoCurso"
+              value="cartao"
+            />
+            <label for="cartao"> Cartão </label>
+          </div>
         </div>
-        <input class="botao" type="submit" />
       </form>
+      <br />
+      <input class="botao" type="submit" />
     </div>
   </body>
 </html>

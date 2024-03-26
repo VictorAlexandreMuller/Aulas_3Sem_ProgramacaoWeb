@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <style>
+      html {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+      table {
+        width: 700px;
+        border-collapse: collapse;
+      }
+      th {
+        border: 2px solid black;
+        padding: 6px;
+      }
+      td {
+        border: 2px solid black;
+        padding: 6px;
+      }
+      div.check {
+        border: 2px solid;
+        padding: 10px;
+      }
+      div.check:hover {
+        background-color: rgb(57, 69, 174);
+      }
+      dt {
+        padding: 10px;
+      }
+
+      /* ---------------------------------- */
+      @keyframes color-rotate {
+        from {
+          filter: hue-rotate(0deg);
+        }
+        to {
+          filter: hue-rotate(360deg);
+        }
+      }
+      .logo:hover {
+        animation: color-rotate 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <!-- Cabeçalho -->
+      <tr>
+        <th></th>
+        <th>Nome do Curso</th>
+        <th>Descrição</th>
+        <th>Turno/Horário</th>
+        <th>Professores</th>
+        <th>Valor</th>
+      </tr>
+      <!-- Primeira Linha -->
+      <tr>
+        <td>
+          <a href="matematica.html" style="color: black;" target="_blank" class="logo"><div class="check"></div></div></a>
+        </td>
+        <td>Matemática</td>
+        <td>Álgebra e Geometria</td>
+        <td>Matutino - 8h às 12h</td>
+        <td>Edson</td>
+        <td>R$ 200,00</td>
+      </tr>
+      <!-- Segunda Linha -->
+      <tr>
+        <td><a href="portugues.html" style="color: black;" target="_blank" class="logo"><div class="check"></div></div></a></td>
+        <td>Português</td>
+        <td>Conjugação Verbal</td>
+        <td>Vespertino - 13h às 17h</td>
+        <td>Eliney</td>
+        <td>R$ 200,00</td>
+      </tr>
+      <!-- Terceira Linha -->
+      <tr>
+        <td>
+        <a href="ingles.html" style="color: black;" target="_blank" class="logo"><div class="check"></div></div></a></td>
+        <td>Inglês</td>
+        <td>Verb To Be</td>
+        <td>Noturno - 19h às 23h</td>
+        <td>Jorge</td>
+        <td>R$ 200,00</td>
+      </tr>
+    </table>
+  </body>
+</html>

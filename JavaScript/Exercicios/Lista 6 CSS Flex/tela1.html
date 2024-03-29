@@ -11,15 +11,17 @@
       }
       .barraLateral {
         width: 20%;
-        height: 80%;
+        height: 100%;
         background-color: gold;
         float: left;
-        position: absolute;
+        position: fixed;
+        right: 74%;
+        top: 0%;
+        padding: 0% 3%;
 
-        /*  
-        display: ;
+        display: flex;
         flex-direction: column;
-        align-items: center;*/
+        align-items: flex-start;
       }
       .conteudoPrincipal {
         width: 80%;
@@ -27,12 +29,15 @@
         background-color: black;
         float: right;
         color: white;
-        position: absolute;
+        position: fixed;
+        left: 20%;
+        top: 0%;
+        padding: 7% 0% 0% 0%;
 
-        /*  
         display: flex;
         flex-direction: column;
-        align-items: center;*/
+        justify-content: center;
+        align-items: center;
       }
     </style>
   </head>
@@ -44,13 +49,11 @@
     </div>
 
     <div class="conteudoPrincipal">
-      <h3>Seja bem-vindo ao nosso site</h3>
-      <h3>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-        repellendus reiciendis in autem hic necessitatibus, voluptatem tempora,
-        aliquam, doloremque accusantium distinctio. Magni velit vitae commodi
-        blanditiis ut neque, autem eius!
-      </h3>
+      <h2>Seja bem-vindo ao nosso site</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni velit
+        vitae commodi blanditiis ut neque, autem eius!
+      </p>
     </div>
   </body>
 </html>

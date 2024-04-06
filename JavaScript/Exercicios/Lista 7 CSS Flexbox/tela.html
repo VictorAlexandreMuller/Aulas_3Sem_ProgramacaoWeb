@@ -5,19 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      html {
+        background-color: rgb(52, 50, 50);
+        font-size: larger;
+        font-weight: bold;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
       .campoPrincipal {
-        width: auto;
-        height: 80vh;
-        border: 1px solid black;
-        background-color: rgb(206, 255, 239);
-        display: flex;
+        max-width: 100%; /* ------- */
+        max-height: 100%;
+        background-color: rgb(152, 125, 44);
+        border: 1px solid white;
+        border-radius: 20%;
+        margin: 5% 35%;
+        /**/
+        display: block;
       }
       .internoPrincipal {
-        border: 1px solid black;
+        padding: 10% 5%;
+        gap: 30px;
+        /**/
+        display: flex;
+        align-items: center;
+        flex-direction: column;
       }
       .areaLogin {
-        border: 1px solid red;
+        gap: 10px;
+        /**/
         display: flex;
+        flex-direction: column;
+      }
+      .tituloCampo {
+        display: flex;
+        justify-content: center;
+      }
+      .botao {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-self: flex-end;
+        font-weight: bold;
       }
     </style>
   </head>
@@ -28,11 +55,21 @@
         <div class="internoPrincipal">
           <img src="Imagens/user.png" alt="logoUser" />
           <div class="areaLogin">
-            <label for="Usuario"> Usuário </label>
-            <input type="text" name="Usuario" required />
+            <label class="tituloCampo" for="Usuario"> Usuário </label>
+            <input
+              type="text"
+              name="Usuario"
+              placeholder="Digite seu usuário..."
+              required
+            />
 
-            <label for="Senha"> Senha </label>
-            <input type="text" name="Senha" required />
+            <label class="tituloCampo" for="Senha"> Senha </label>
+            <input
+              type="text"
+              name="Senha"
+              placeholder="Digite sua senha..."
+              required
+            />
 
             <input class="botao" type="submit" />
           </div>

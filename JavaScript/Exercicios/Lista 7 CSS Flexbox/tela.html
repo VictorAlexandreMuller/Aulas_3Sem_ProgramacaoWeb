@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .campoPrincipal {
+        width: auto;
+        height: 80vh;
+        border: 1px solid black;
+        background-color: rgb(206, 255, 239);
+        display: flex;
+      }
+      .internoPrincipal {
+        border: 1px solid black;
+      }
+      .areaLogin {
+        border: 1px solid red;
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div class="campoPrincipal">
+        <div class="internoPrincipal">
+          <img src="Imagens/user.png" alt="logoUser" />
+          <div class="areaLogin">
+            <label for="Usuario"> Usuário </label>
+            <input type="text" name="Usuario" required />
+
+            <label for="Senha"> Senha </label>
+            <input type="text" name="Senha" required />
+
+            <input class="botao" type="submit" />
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>

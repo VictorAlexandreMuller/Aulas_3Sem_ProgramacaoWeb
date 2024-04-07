@@ -31,6 +31,7 @@
       }
       .areaLogin {
         gap: 10px;
+        max-width: 70%;
         /**/
         display: flex;
         flex-direction: column;
@@ -46,6 +47,9 @@
         align-self: flex-end;
         font-weight: bold;
       }
+      .imgUser {
+        max-width: 50%;
+      }
     </style>
   </head>
   <body>
@@ -53,7 +57,7 @@
     <main>
       <div class="campoPrincipal">
         <div class="internoPrincipal">
-          <img src="Imagens/user.png" alt="logoUser" />
+          <img class="imgUser" src="Imagens/user.png" alt="logoUser" />
           <div class="areaLogin">
             <label class="tituloCampo" for="Usuario"> Usuário </label>
             <input

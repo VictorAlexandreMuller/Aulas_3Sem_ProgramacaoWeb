@@ -6,9 +6,11 @@
     <title>Document</title>
     <style>
       .borda {
-        border: 1px solid black;
+        border: 3px solid black;
+        border-radius: 10%;
         height: 100px;
         width: 100px;
+        transition: background-color 0.3s ease;
       }
       .moldura {
         border: 0px solid red;
@@ -18,13 +20,125 @@
         justify-content: center;
         flex-direction: column;
       }
+
+      .testeDiv {
+        border: 0px solid red;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
     </style>
   </head>
   <body>
     <div class="moldura">
-      <button class="classeBotao">Alterar Cor</button>
-      <div class="borda" id="alterarCor"></div>
+      <button class="classeBotao" id="botaoCorRandom">Random Color</button>
+      <div class="borda" id="alterarCorRandom"></div>
+    </div>
+    <div class="testeDiv">
+      <!-- RED -->
+      <div class="moldura">
+        <button class="classeBotao" id="botaoCorRed">Red</button>
+        <div class="borda" id="alterarCorRed"></div>
+      </div>
+
+      <!-- GREEN -->
+      <div class="moldura">
+        <button class="classeBotao" id="botaoCorGreen">Green</button>
+        <div class="borda" id="alterarCorGreen"></div>
+      </div>
+
+      <!-- BLUE -->
+      <div class="moldura">
+        <button class="classeBotao" id="botaoCorBlue">Blue</button>
+        <div class="borda" id="alterarCorBlue"></div>
+      </div>
+
+      <!-- YELLOW -->
+      <div class="moldura">
+        <button class="classeBotao" id="botaoCorYellow">Yellow</button>
+        <div class="borda" id="alterarCorYellow"></div>
+      </div>
     </div>
   </body>
-  <script></script>
+  <script>
+    document
+      .getElementById("botaoCorRandom") //
+      .addEventListener("click", function () {
+        var divCor = document.getElementById("alterarCorRandom");
+        // Gere uma cor aleatória usando RGB
+        var cor =
+          "rgb(" +
+          Math.floor(Math.random() * 256) +
+          "," +
+          Math.floor(Math.random() * 256) +
+          "," +
+          Math.floor(Math.random() * 256) +
+          ")";
+        divCor.style.backgroundColor = cor;
+      });
+
+    document
+      .getElementById("botaoCorRed") //
+      .addEventListener("click", function () {
+        var divCor = document.getElementById("alterarCorRed");
+        // Gere uma cor aleatória usando RGB
+        var cor =
+          "rgb(" +
+          Math.floor(Math.random() * 256) +
+          "," +
+          Math.floor(Math.random() * 0) +
+          "," +
+          Math.floor(Math.random() * 0) +
+          ")";
+        divCor.style.backgroundColor = cor;
+      });
+
+    document
+      .getElementById("botaoCorGreen") //
+      .addEventListener("click", function () {
+        var divCor = document.getElementById("alterarCorGreen");
+        // Gere uma cor aleatória usando RGB
+        var cor =
+          "rgb(" +
+          Math.floor(Math.random() * 0) +
+          "," +
+          Math.floor(Math.random() * 256) +
+          "," +
+          Math.floor(Math.random() * 0) +
+          ")";
+        divCor.style.backgroundColor = cor;
+      });
+
+    document
+      .getElementById("botaoCorBlue") //
+      .addEventListener("click", function () {
+        var divCor = document.getElementById("alterarCorBlue");
+        // Gere uma cor aleatória usando RGB
+        var cor =
+          "rgb(" +
+          Math.floor(Math.random() * 0) +
+          "," +
+          Math.floor(Math.random() * 0) +
+          "," +
+          Math.floor(Math.random() * 256) +
+          ")";
+        divCor.style.backgroundColor = cor;
+      });
+
+    document
+      .getElementById("botaoCorYellow") //
+      .addEventListener("click", function () {
+        var divCor = document.getElementById("alterarCorYellow");
+        // Gere uma cor aleatória usando RGB
+        var cor =
+          "rgb(" +
+          Math.floor(Math.random() * 56 + 200) +
+          "," +
+          Math.floor(Math.random() * 56 + 200) +
+          "," +
+          Math.floor(Math.random() * 0) +
+          ")";
+        divCor.style.backgroundColor = cor;
+      });
+  </script>
 </html>

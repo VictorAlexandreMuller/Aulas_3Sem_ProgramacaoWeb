@@ -4,6 +4,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      html {
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background: linear-gradient(
+          to right,
+          rgb(110, 110, 189),
+          rgb(24, 24, 58)
+        );
+      }
+
+      body {
+        border: 0px solid red;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .contadorClasse {
+        width: 15rem;
+        height: 15rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: cyan;
+
+        background-image: url(cookie.png);
+        background-size: cover; /* Redimensiona a imagem para cobrir todo o elemento pai */
+        background-repeat: no-repeat; /* A imagem não se repete */
+        background-position: center; /* Centraliza a imagem no elemento pai */
+      }
+
+      #contadorID {
+        font-size: 24px;
+        margin-top: 20px;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <h1>Cookie Clicker</h1>
+    <button id="botao">+1 Cookie <3</button>
+    <div class="contadorClasse" id="contadorID">0</div>
+  </body>
+  <script>
+    // Seleciona o botão e o contador
+    const botao = document.getElementById("botao");
+    const contadorID = document.getElementById("contadorID");
+
+    // Inicializa o contador
+    let contadorCliques = 0;
+
+    // Define a função para atualizar o contador quando o botão é clicado
+    botao.addEventListener("click", () => {
+      contadorCliques++;
+      contadorID.textContent = contadorCliques;
+    });
+  </script>
 </html>

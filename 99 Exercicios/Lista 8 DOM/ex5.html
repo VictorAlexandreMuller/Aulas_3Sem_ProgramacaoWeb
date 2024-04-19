@@ -4,6 +4,71 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      html {
+        background: linear-gradient(
+          to right,
+          rgb(217, 197, 85),
+          rgb(111, 75, 12)
+        );
+      }
+
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .divPrincipal {
+        text-align: center;
+      }
+
+      input[type="text"] {
+        width: 80%;
+        padding: 0.4rem;
+        margin-bottom: 20px;
+        font-size: 16px;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: rgb(131, 23, 93);
+        color: #fff;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+
+      p {
+        font-size: 20px;
+        margin-top: 20px;
+      }
+
+      h2 {
+        color: rgb(81, 13, 57);
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="divPrincipal">
+      <h2>Caça Palavras</h2>
+      <input
+        type="text"
+        id="inputText"
+        placeholder="Digite o seu texto aqui..."
+      />
+      <button onclick="countWords()">Contar Palavras</button>
+      <p id="wordCount"></p>
+    </div>
+  </body>
+  <script>
+    function countWords() {
+      var inputText = document.getElementById("inputText").value;
+      var wordCount = inputText.trim().split(/\s+/).length;
+      document.getElementById("wordCount").textContent =
+        "Número de palavras: " + wordCount;
+    }
+  </script>
 </html>

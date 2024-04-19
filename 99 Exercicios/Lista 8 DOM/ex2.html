@@ -5,32 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      body {
+      html {
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background: linear-gradient(
+          to right,
+          rgb(13, 13, 13),
+          rgb(130, 130, 130)
+        );
+      }
+
+      .ToDoInputs {
         display: flex;
-        align-items: center;
         justify-content: center;
         flex-direction: column;
+        align-items: center;
       }
-      #task-list {
-        list-style-type: none;
+
+      body > ul {
+        border: 0px solid red;
+        width: 30%;
+        margin-left: 49.3%;
         padding: 0;
+        overflow-wrap: break-word;
       }
     </style>
   </head>
   <body>
-    <h1>To Do</h1>
+    <div class="ToDoInputs">
+      <h1>To Do</h1>
+      <br />
+      <input
+        type="text"
+        id="taskInput"
+        placeholder="Digite uma nova tarefa..."
+      />
+      <br />
+      <input type="button" value="Adicionar" id="addTask" />
+    </div>
     <br />
-    <input type="text" id="task-input" placeholder="Digite uma nova tarefa" />
-    <br />
-    <input type="button" value="Adicionar" id="add-task-btn" />
-    <br />
-    <ul id="task-list"></ul>
+    <ul id="taskList"></ul>
   </body>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const taskInput = document.getElementById("task-input");
-      const addTaskBtn = document.getElementById("add-task-btn");
-      const taskList = document.getElementById("task-list");
+      const taskInput = document.getElementById("taskInput");
+      const addTaskBtn = document.getElementById("addTask");
+      const taskList = document.getElementById("taskList");
 
       addTaskBtn.addEventListener("click", function () {
         const taskText = taskInput.value.trim();

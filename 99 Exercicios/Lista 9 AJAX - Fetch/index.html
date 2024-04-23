@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJAX - Fetch</title>
+    <link
+      rel="stylesheet"
+      href="Ancoragens/Primeiro Projeto/styles css/styleHome.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="Ancoragens/Outros/tagsHtml.html">Tags HTML</a>
+        <a href="Ancoragens/Outros/cssFundamentos.html">CSS Fundamentos</a>
+        <a href="Ancoragens/Outros/flexBox.html">FlexBox</a>
+        <a href="Ancoragens/Outros/dom.html">DOM</a>
+        <a href="Ancoragens/Primeiro Projeto/index.html"
+          >TESTE PARA PROJETO UPX DENTRO DO EXERCICIO AULA 9? SIM</a
+        >
+      </nav>
+    </header>
+    <hr />
+    <main><div class="conteudo"></div></main>
+    <footer class="rodape"><p>Rodape Aula 9</p></footer>
+  </body>
+  <script>
+    let links = document.querySelectorAll("a");
+    let pagina = document.querySelector(".conteudo");
+    links.forEach((element) => {
+      element.addEventListener("click", (event) => {
+        event.preventDefault();
+        fetch(element.getAttribute("href"))
+          .then((resposta) => resposta.text())
+
+          .then((dados) => {
+            pagina.innerHTML = dados;
+            // Busca todos os scripts dentro do HTML inserido
+            let scripts = pagina.querySelectorAll("script[src]");
+            // Carrega e executa cada script
+            scripts.forEach((script) => {
+              let novoScript = document.createElement("script");
+              novoScript.src = script.src;
+              document.body.appendChild(novoScript);
+            });
+            // Verifica se há scripts embutidos no HTML inserido e executa-os
+            let scriptsEmbutidos = pagina.querySelectorAll("script:not([src])");
+            scriptsEmbutidos.forEach((script) => {
+              eval(script.innerHTML);
+            });
+          });
+      });
+    });
+  </script>
+</html>

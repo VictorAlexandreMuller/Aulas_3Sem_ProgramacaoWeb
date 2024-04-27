@@ -1,0 +1,18 @@
+main {
+  width: 50%;
+}
+
+form > fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form > fieldset > label,
+input {
+  width: 200px;
+}
+
+form > fieldset > select {
+  width: 210px;
+}

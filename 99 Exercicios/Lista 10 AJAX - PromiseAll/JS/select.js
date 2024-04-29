@@ -5,6 +5,14 @@ fetch("dados.json")
     // Cria opções para um <select> dado um array de objetos
     function popularSelect(selectId, dataArray) {
       const select = document.getElementById(selectId);
+      const option1 = document.createElement("option");
+
+      option1.value = "";
+      option1.textContent = "--- Selecione uma opção ---";
+      // option1.disabled = true;
+      // option1.selected = true;
+      select.appendChild(option1);
+
       dataArray.forEach((item) => {
         const option = document.createElement("option");
         option.value = item.id;
@@ -17,13 +25,4 @@ fetch("dados.json")
     popularSelect("boxSetor", data.Setor);
     popularSelect("boxCargo", data.Cargo);
     popularSelect("boxConvenio", data.Convênio);
-  });
-
-fetch("dados.json")
-  .then((response) => response.json())
-  .then((data) => {
-    function carregarDados(selectId, dataArray) {
-      const select = document.getElementById(selectId);
-    }
-    carregarDados();
   });

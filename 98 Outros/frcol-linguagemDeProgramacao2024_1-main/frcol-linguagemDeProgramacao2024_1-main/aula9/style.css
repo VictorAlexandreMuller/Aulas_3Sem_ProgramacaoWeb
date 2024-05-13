@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 5px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    background-color: #4CAF50;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+.btn:hover {
+    background-color: #66e86c;
+}
+
+.btn:active {
+    background-color: #4CAF50;
+}
+
+.active {
+    background-color: #ffffff;
+    color: #333;
+}
+
+.start {
+    border-radius:  10px 0 0 10px;
+}
+
+.end {
+    border-radius: 0 10px 10px 0;
+}
+
+/* ====================================== */
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.teclado{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+    gap: 10px;
+    width: 300px;
+    padding: 10px;
+    border: #333    solid 1px;
+    margin-top: 10px;
+    background-color: azure;
+}
+
+.tecla {
+    background-color: #f1f1f1;
+    color: black;
+    padding: 20px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #333;
+    border-radius: 20px;
+    font-size: 40px;
+}

@@ -1,0 +1,43 @@
+body {
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: rgb(15, 241, 23);
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+p {
+    color: rgb(243, 34, 156);
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.minhaClasse {
+    color: aqua;
+}
+
+.outraClasse {
+    text-decoration: line-through;
+}
+
+#p1 {
+    color: royalblue;
+}
+
+.imgStyle {
+    width: 200px;
+    height: 200px;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.imgStyle_1 {
+    width: 200px;
+    height: 200px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50px;
+}

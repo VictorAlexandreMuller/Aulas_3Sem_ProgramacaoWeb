@@ -1,0 +1,50 @@
+/* RESET CSS */
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+body {
+    height: 100vh;
+}
+/* ========================================== */
+
+.caixa_1 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    text-align: center;
+    line-height: 100px;
+    vertical-align: middle;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    border: 2px solid black;
+    margin: 0 auto;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.caixa_2 {
+    margin: 0 0 auto;
+    background-color: rgb(251, 244, 15);
+}
+
+.caixa_3 {
+    margin: 0 0 0 auto;
+    color: white;
+    background-color: rgb(15, 19, 251);
+}
+
+.container {
+    margin: 50px;
+}
+
+header {
+    background-color: royalblue;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+}

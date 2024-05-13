@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+main {
+    margin: 0 auto;
+    background-color: aqua;
+    padding: 10px;
+    width: 75%;
+}
+
+.section_1 {
+    text-align: right;
+    background-color: aquamarine;
+}
+
+.section_2 {
+    margin-top: 10px;
+    text-align: justify;
+    background-color: beige;
+}
+
+.section_3 {
+    margin-top: 10px;
+    text-align: left;
+    background-color: beige;
+}

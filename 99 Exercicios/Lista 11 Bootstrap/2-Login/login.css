@@ -100,7 +100,7 @@ body {
 }
 
 .solicitacaoDoProfessor {
-  position: relative; /* Adicionando posição relativa ao elemento pai */
+  position: relative;
 
   height: 100%;
   background-position: center;
@@ -112,8 +112,8 @@ body {
 }
 
 .solicitacaoDoProfessor::before {
-  content: ""; /* Adicionando conteúdo vazio para o pseudo-elemento */
-  position: absolute; /* Posicionando o pseudo-elemento absolutamente */
+  content: "";
+  position: absolute;
 
   background-position: center;
   background-repeat: no-repeat;
@@ -124,6 +124,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+
   opacity: 50%;
-  z-index: -1; /* Colocando o pseudo-elemento atrás do conteúdo */
+  z-index: -1;
 }
